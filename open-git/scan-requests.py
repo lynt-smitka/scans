@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 def test(web):
 
         furl = "http://{0}/.git/HEAD".format(url)
-        agent = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 Lynt.cz'}
+        agent = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
  
         r = requests.get(furl, timeout=5, allow_redirects=True, headers=agent, verify=False)
         print("TEST: {0}".format(furl))
