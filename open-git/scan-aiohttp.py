@@ -7,7 +7,7 @@ from aiohttp import ClientTimeout
 async def fetch(url, session):
 
     furl = "http://{0}/.git/HEAD".format(url)
-    agent = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36 Lynt.cz'}
+    agent = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
        
     try:
       async with session.get(furl, headers=agent, compress=True) as r:
